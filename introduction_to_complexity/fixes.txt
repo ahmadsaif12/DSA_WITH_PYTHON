@@ -3,3 +3,4 @@ another fix
 another 3rd fix
 
 add another fixed 
+add fixed in pinkmode
