@@ -1,0 +1,165 @@
+---------------day1------------------------------
+
+Data        = collection of raw information
+              example: [10, 20, 30]
+
+Structure   = how we store / arrange data
+              example: list, array, stack
+
+Algorithm   = set of rules / steps to solve a problem
+              example: loop to print data
+
+------------------------------------------------------------
+
+IDEA:
+Time Complexity = how many times a line runs
+n = number of items (input size)
+
+------------------------------------------------------------
+CONSTANT TIME  →  O(1) or n=5
+------------------------------------------------------------
+
+MATHEMATICAL VIEW:
+T(n) = 1
+
+(no matter how big n is)
+
+PROGRAM:
+------------------------------------------------------------
+x = 5
+print(x)
+------------------------------------------------------------
+
+STEP COUNT:
+print(x) → 1 time
+
+If n = 10   → 1 step
+If n = 100  → 1 step
+
+TIME COMPLEXITY = O(1)
+
+------------------------------------------------------------
+LINEAR TIME  →  O(n)
+------------------------------------------------------------
+
+MATHEMATICAL VIEW:
+
+
+PROGRAM:
+------------------------------------------------------------
+for i in range(n):
+    print(i)
+------------------------------------------------------------
+
+STEP COUNT:
+Loop runs n times
+
+If n = 3  → 3 steps
+If n = 5  → 5 steps
+
+TIME COMPLEXITY = O(n)
+
+------------------------------------------------------------
+LINEAR TIME (ADDING NUMBERS)  →  O(n)
+------------------------------------------------------------
+
+MATHEMATICAL VIEW:
+T(n) = n + 1   → ignore constant → n
+
+PROGRAM:
+------------------------------------------------------------
+total = 0
+for i in range(n):
+    total = total + i
+------------------------------------------------------------
+
+STEP COUNT:
+Loop runs n times
+
+TIME COMPLEXITY = O(n)
+
+------------------------------------------------------------
+TWO LOOPS (SEPARATE)  →  O(2n) → O(n)
+------------------------------------------------------------
+
+MATHEMATICAL VIEW:
+T(n) = n + n = 2n
+Ignore constant 2
+
+PROGRAM:
+------------------------------------------------------------
+for i in range(n):
+    print(i)
+
+for j in range(n):
+    print(j)
+------------------------------------------------------------
+
+TIME COMPLEXITY = O(n)
+
+------------------------------------------------------------
+QUADRATIC TIME  →  O(n²)
+------------------------------------------------------------
+
+MATHEMATICAL VIEW:
+T(n) = n × n = n²
+
+PROGRAM:
+------------------------------------------------------------
+for i in range(n):
+    for j in range(n):
+        print(i, j)
+------------------------------------------------------------
+
+STEP COUNT:
+If n = 2 → 2 × 2 = 4
+If n = 3 → 3 × 3 = 9
+
+TIME COMPLEXITY = O(n²)
+
+------------------------------------------------------------
+CONSTANT + LINEAR  →  O(n)
+------------------------------------------------------------
+
+MATHEMATICAL VIEW:
+T(n) = 1 + n
+Highest term wins
+
+PROGRAM:
+------------------------------------------------------------
+print("Hello")
+
+for i in range(n):
+    print(i)
+------------------------------------------------------------
+
+TIME COMPLEXITY = O(n)
+
+------------------------------------------------------------
+LOGARITHMIC TIME  →  O(log n)
+------------------------------------------------------------
+
+MATHEMATICAL VIEW:
+n = n / 2 each step
+
+PROGRAM:
+------------------------------------------------------------
+while n > 1:
+    n = n // 2
+------------------------------------------------------------
+
+STEP COUNT:
+n = 16 → 8 → 4 → 2 → 1
+Steps = log₂(16) = 4
+
+TIME COMPLEXITY = O(log n)
+
+
+
+1 step                  → T(n) = 1        → O(1)
+1 loop                  → T(n) = n        → O(n)
+2 separate loops        → T(n) = 2n       → O(n)
+loop inside loop        → T(n) = n²       → O(n²)
+divide by 2 each step   → T(n) = log n    → O(log n)
+
+============================================================
